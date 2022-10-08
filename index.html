@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Mo - Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    
+*{ margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+.header{
+min-height: 100vh;
+width: 100%;
+background: #000;
+color: #fff;
+position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10%;
+}
+.nav-links{
+    text-align: right;
+    background: #92a5f8c7;
+    padding: 10px 30px;
+    border-bottom-left-radius: 18px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li a:hover{
+    color: #000;
+}
+.left-sidebar{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+}
+.row{
+    padding: 0 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -1%;
+}
+.left-col{
+    flex-basis: 40%;
+}
+.right-col{
+    flex-basis: 55%;
+}
+.left-col img{
+    width: 80%;
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: filter 1s;
+}
+.left-col img:hover{
+    filter: grayscale(1);
+}
+.right-col h1{
+    font-style: 55px;
+    font-weight: 600;
+}
+.right-col p{
+    color: #777;
+    margin: 20px 0 70px;
+}
+.social-media{
+    display: flex;
+    margin-top: 30px;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    padding: -5%;
+    background: #555;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.icon i{
+    width: 28px;
+}
+.icon a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff1616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.icon a:hover{
+    opacity: 1;
+}
+.icon:hover{
+    transform: translateY(-5px);
+}
+.img_me img{
+    height: 100%;
+    
+}
+.social-icons a{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 0 15px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.social-icons a:hover::before,
+.wrapper .icon:hover::before,
+.buttons button:hover:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
+}
+.buttons button:hover:before{
+  z-index: -1;
+  border-radius: 5px;
+}
+.social-icons a i{
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+.social-icons a.fb i{
+  color: #4267B2;
+}
+.social-icons a.twitter i{
+  color: #1DA1F2;
+}
+.social-icons a.insta i{
+  color: #E1306C;
+}
+.social-icons a.yt i{
+  color: #ff0000;
+}
+.name{
+    margin-bottom:30px ;
+}
+.img{
+    width: 188px;
+   
+    height: 283px;
+}
+</style>
+<body>
+    <div class="header">
+        <nav>
+            <a href="#" class="logo name">Shrisha Hegde</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="left-sidebar"></div>
+        <div class="row">
+            <div class="left-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ14UMuqkmrQUze0qE2lR6OLhxdc2pANqz-rA&usqp=CAU" />
+            </div>
+            <div class="right-col">
+                <h1>I'm Shrisha Hegde <br>
+                    Web Developer
+                </h1>
+                <p>I have over 5 years experience in the web development industry and
+                    have worked with more than 20 clients nationwide</p>
+                <div class="social-media">
+                <div class="social-icons">
+                    <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+                </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
